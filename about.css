@@ -1,0 +1,54 @@
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/004/962/719/non_2x/sweet-chocolate-background-free-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Mystery Quest', cursive;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 23px;
+}
+
+.navbar-brand img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar-brand h5 {
+    margin-left: 8px;
+    color: #d2b48c;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.content-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    border: 3px solid lavender;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
