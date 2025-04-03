@@ -1,0 +1,14 @@
+body {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/004/962/719/non_2x/sweet-chocolate-background-free-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Mystery Quest', cursive;
+    color: white;
+    text-align: center;
+}
+
+.form-group label {
+    color: black;
+    font-size: 20px;
+}
