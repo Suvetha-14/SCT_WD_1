@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Chocoluxe</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/sty.css">
+
+    <style>
+        /* Background Image */
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/004/962/719/non_2x/sweet-chocolate-background-free-vector.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Mystery Quest', cursive;
+            color: white;
+            text-align: center;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent navbar */
+            font-size:23px;
+        }
+
+        .navbar-brand img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .navbar-brand h5 {
+            margin-left: 8px;
+            color: #d2b48c; /* Gold accent color */
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        h1, p,h3 {
+            text-align: center;
+color:white;
+        }
+
+        .form-group label {
+            color: white;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .btn-primary {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/e6261c191454575.65cbcfef53bdd.gif">
+            <h5>Chocoluxe</h5>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="Menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have a question? Need help? Get in touch with us!</p>
+
+        <!-- Contact Form -->
+        <form action="contact_form.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+            </div>
+<button type="button" class="btn btn-primary" onclick="showMessage()">Send Message</button>
+
+<!-- Placeholder for the message -->
+<p id="confirmationMessage" style="display: none; color: white; font-size: 18px; margin-top: 10px; text-align: center;">
+    ✅ Message Sent Successfully!
+</p>
+
+<hr style="background-color:lavender;">
+
+<script>
+    function showMessage() {
+        document.getElementById("confirmationMessage").style.display = "block"; // Show the message
+    }
+</script>
+
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info mt-4">
+            <h3>📍 Our Location</h3>
+            <p>123 Chocolate Street, Cocoa City, Sweetland</p>
+
+            <h3>📞 Call Us</h3>
+            <p>+1 234 567 8900</p>
+
+            <h3>📧 Email Us</h3>
+            <p>support@chocoluxe.com</p>
+
+            <h3>🌍 Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!-- Footer -->
+    <footer><br>
+        <p style="color:#8B4513;">&copy; 2025 Chocoluxe. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

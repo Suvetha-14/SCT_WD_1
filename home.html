@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Chocoluxe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sty.css">
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/004/962/719/non_2x/sweet-chocolate-background-free-vector.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Mystery Quest', cursive;
+            color: white;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent navbar */
+            font-size:23px;
+        }
+
+        .navbar-brand img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .navbar-brand h5 {
+            margin-left: 8px;
+            color: #d2b48c; /* Gold accent color */
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/backs.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0; /* Increased padding */
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: #d2b48c; /* Gold accent color */
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .products h2 {
+            color:black; /* Gold accent color */
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent card */
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            color:black;
+        }
+        .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 5px double transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), /* Inner background */
+        linear-gradient(to right, #6F4E37, #3C2A1E, #8B4513); /* Richer chocolate gradient */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    position: relative;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), transparent, rgba(255, 255, 255, 0.3)); /* Enhanced shine */
+    pointer-events: none;
+    border-radius: 18px;
+    z-index: 1; /* Place shine above border */
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 19px;
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Subtle inner border */
+    pointer-events: none;
+    z-index: 2; /* Place inner border above shine */
+}
+        footer {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent footer */
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/e6261c191454575.65cbcfef53bdd.gif">
+            <h5>Chocoluxe</h5>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="Menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to Chocoluxe</h1>
+            <p>Your one-stop shop for the finest chocolates.</p>
+            <a href="Menu.html" class="btn btn-primary btn-lg">Shop Now</a>
+        </div>
+    </header>
+
+    <section class="products">
+        <div class="container">
+            <h2>Our Chocolate Gallery</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPyAL_ivOj2xUmHoOWiaYiwforjF4ZjiKi_4W2t9QeVcn5t55m9XyhKwGhq9a38oAvuBY&usqp=CAU" alt="Dark Chocolate">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://w4s8p5t8.delivery.rocketcdn.me/wp-content/uploads/2019/01/dairy-free-milk-chocolate-recipe.jpg.webp" alt="Milk Chocolate">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://godelchocolate.com/wp-content/uploads/2021/09/white-chocolate-3.jpg" alt="White Chocolate">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Hershey%27s_KISSES_Chocolate_Flavors_Written_on_Paper_Plume.jpg" alt="Chocolate 4">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://static.wixstatic.com/media/e1e9e8_12cf3346ba0a469589bca3becdefd766~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e1e9e8_12cf3346ba0a469589bca3becdefd766~mv2.jpg" alt="Chocolate 5">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://www.gordonrestaurantmarket.com/wp-content/uploads/2022/05/738802-RAW-6.jpg" alt="Chocolate 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="color:#8B4513;">&copy; 2025 Chocoluxe. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

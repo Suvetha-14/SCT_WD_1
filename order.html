@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order - Chocoluxe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/004/962/719/non_2x/sweet-chocolate-background-free-vector.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Mystery Quest', cursive;
+            color: white;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Place Your Order</h1>
+        <form id="orderForm">
+            <div class="form-group" style="color:black;font-size:20px;">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group" style="color:black;font-size:20px;">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="address" required></textarea>
+            </div>
+            <div class="form-group" style="color:black;font-size:20px;">
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group" style="color:black;font-size:20px;">
+                <label for="whatsapp">WhatsApp Number</label>
+                <input type="text" class="form-control" id="whatsapp" required>
+            </div>
+            <div class="form-group" style="color:black;font-size:20px;">
+                <label for="product">Product Name</label>
+                <input type="text" class="form-control" id="product" disabled>
+            </div>
+            <div class="form-group" style="color:black;font-size:20px;">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" id="price" disabled>
+            </div>
+            <button type="submit" class="btn btn-success">Place Order</button>
+        </form>
+
+        <div id="orderNotification" style="display:none;">
+            <p>Order placed successfully!</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Chocoluxe. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('product').value = urlParams.get('product');
+        document.getElementById('price').value = urlParams.get('price');
+
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('orderNotification').style.display = 'block';
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

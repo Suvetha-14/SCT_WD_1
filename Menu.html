@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Chocoluxe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+     
+    <style>
+       body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/004/962/719/non_2x/sweet-chocolate-background-free-vector.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Mystery Quest', cursive;
+            color: black;
+            text-align: center;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent navbar */
+            font-size:23px;
+        }
+
+        .navbar-brand img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .navbar-brand h5 {
+            margin-left: 8px;
+            color: #d2b48c; /* Gold accent color */
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: 2px solid #8B4513;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .btn-like {
+            color: red;
+            font-size: 1.5rem;
+            transition: transform 0.1s ease-in-out;
+        }
+        .btn-like.shake {
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, 1px) rotate(0deg); }
+        }
+        .btn-choco-cart {
+            background-color: #8B4513;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .btn-buy-now {
+            background-color: #28a745;
+            color: white;
+            font-size: 1.2rem;
+        }
+        footer {
+            text-align: center;
+            color:#8B4513;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/e6261c191454575.65cbcfef53bdd.gif">
+            <h5>Chocoluxe</h5>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="Menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </nav>
+<br>
+    <div class="container">
+        <h1 class="text-center text-brown" style="background-color:#d2b48c; background-size: 100px;border:black;">Our Chocolate Products</h1>
+<br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/71+wTW7U0YL.jpg" class="card-img-top" alt="Cadbury Dairy Milk">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadbury Dairy Milk</h5>
+                        <p class="card-text">Smooth and creamy milk chocolate.</p>
+                        <p>Price: $5 | Rating: ⭐⭐⭐⭐☆</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Cadbury Dairy Milk', '$5', '⭐⭐⭐⭐☆')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.celebratebigday.com/wp-content/uploads/2021/01/3-Cadbury-Bournville-Dark-Chocolate-Bar.jpg" class="card-img-top" alt="Cadbury Bournville">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadbury Bournville</h5>
+                        <p class="card-text">Premium dark chocolate.</p>
+                        <p>Price: $7 | Rating: ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Cadbury Bournville', '$7', '⭐⭐⭐⭐⭐')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/81Rz8SxtiJL.jpg" class="card-img-top" alt="Amul Milk Chocolate" height="340px">
+                    <div class="card-body">
+                        <h5 class="card-title">Amul Milk Chocolate</h5>
+                        <p class="card-text">Classic milk chocolate with rich cocoa.</p>
+                        <p>Price: $6 | Rating: ⭐⭐⭐⭐☆</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Amul Milk Chocolate', '$6', '⭐⭐⭐⭐☆')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://bisarga.com/wp-content/uploads/2021/06/Nestle-KitKat-Chocolate-37.3g-Pouch-24.jpg" class="card-img-top" alt="Nestle KitKat">
+                    <div class="card-body">
+                        <h5 class="card-title">Nestle KitKat</h5>
+                        <p class="card-text">Crispy wafer covered with chocolate.</p>
+                        <p>Price: $4 | Rating: ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Nestle KitKat', '$4', '⭐⭐⭐⭐⭐')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/7145HGtbSML.jpg" class="card-img-top" alt="Nestle Milky Bar">
+                    <div class="card-body">
+                        <h5 class="card-title">Nestle Milky Bar</h5>
+                        <p class="card-text">Delicious white chocolate treat.</p>
+                        <p>Price: $5 | Rating: ⭐⭐⭐⭐☆</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Nestle Milky Bar', '$5', '⭐⭐⭐⭐☆')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/71CWxpJENhL.jpg" class="card-img-top" alt="Ferrero Rocher Premium Chocolates">
+                    <div class="card-body">
+                        <h5 class="card-title">Ferrero Rocher 24 Pieces</h5>
+                        <p class="card-text">Luxurious hazelnut chocolates.</p>
+                        <p>Price: $15 | Rating: ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Ferrero Rocher 24 Pieces', '$15', '⭐⭐⭐⭐⭐')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://img.ssww.com/cs_srgb/q_90/w_512/cs_srgb/q_90/v1719862428/41/01/SWNL64101.jpg" class="card-img-top" alt="Hershey's Milk Chocolate">
+                    <div class="card-body">
+                        <h5 class="card-title">Hershey's Milk Chocolate</h5>
+                        <p class="card-text">Classic American chocolate bar.</p>
+                        <p>Price: $4 | Rating: ⭐⭐⭐⭐☆</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Hershey\'s Milk Chocolate', '$4', '⭐⭐⭐⭐☆')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=1080/app/videos/products/thumbnail/fd700720-2112-4299-9112-36d281bfa507.jpg?ts=1728284078" class="card-img-top" alt="Snickers">
+                    <div class="card-body">
+                        <h5 class="card-title">Snickers</h5>
+                        <p class="card-text">Peanut caramel nougat bar.</p>
+                        <p>Price: $3 | Rating: ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Snickers', '$3', '⭐⭐⭐⭐⭐')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/611X-6wSVIL.jpg" class="card-img-top" alt="Galaxy">
+                    <div class="card-body">
+                        <h5 class="card-title">Galaxy</h5>
+                        <p class="card-text">Smooth and creamy chocolate.</p>
+                        <p>Price: $5 | Rating: ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Galaxy', '$5', '⭐⭐⭐⭐⭐')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.giftsmyntra.com/wp-content/uploads/2020/12/maha-pack-of-five-star.jpg" class="card-img-top" alt="5 Star">
+                    <div class="card-body">
+                        <h5 class="card-title">5 Star</h5>
+                        <p class="card-text">Chewy and crunchy chocolate bar.</p>
+                        <p>Price: $2 | Rating: ⭐⭐⭐⭐☆</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('5 Star', '$2', '⭐⭐⭐⭐☆')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://gharstuff.com/wp-content/uploads/2024/04/440219a.jpg" class="card-img-top" alt="Cadbury Dairy Milk Crispello" height="340PX">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadbury Dairy Milk Crispello</h5>
+                        <p class="card-text">Crispy and creamy chocolate bar.</p>
+                        <p>Price: $6 | Rating: ⭐⭐⭐⭐☆</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Cadbury Dairy Milk Crispello', '$6', '⭐⭐⭐⭐☆')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://cdn.dotpe.in/longtail/store-items/8365720/dwMPwBAl.jpeg" class="card-img-top" alt="Cadbury Celebrations">
+                    <div class="card-body">
+                        <h5 class="card-title">Fuse</h5>
+                        <p class="card-text">Chocolate bar with crunchy caramel.</p>
+                        <p>Price: $10 | Rating: ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-like" onclick="toggleFavorite(this)">❤️</button>
+                        <button class="btn btn-choco-cart" onclick="addToChocoCart(this)">Choco Cart</button>
+                        <button class="btn btn-buy-now" onclick="redirectToOrderPage('Fuse', '$10', '⭐⭐⭐⭐⭐')">Buy Now</button>
+                        <span class="choco-cart-status" style="display:none;">Added to Choco Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Chocoluxe. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle the heart on favorite button
+        function toggleFavorite(button) {
+            button.classList.toggle('shake');
+            setTimeout(() => {
+                button.classList.remove('shake');
+            }, 500);
+        }
+
+        // Add to Choco Cart
+        function addToChocoCart(button) {
+            const status = button.nextElementSibling;
+            status.style.display = 'inline-block';
+            button.textContent = "Added to Choco Cart";
+            setTimeout(() => {
+                status.style.display = 'none';
+                button.textContent = "Choco Cart";
+            }, 2000);
+        }
+
+        // Redirect to Order Page
+        function redirectToOrderPage(productName, price, rating) {
+            window.location.href = `order.html?product=${encodeURIComponent(productName)}&price=${encodeURIComponent(price)}&rating=${encodeURIComponent(rating)}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('product').value = urlParams.get('product') || 'Product Name Not Found';
+    document.getElementById('price').value = urlParams.get('price') || 'Price Not Found';
+});
+
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('orderNotification').style.display = 'block';
+    setTimeout(() => {
+        window.history.back(); // Redirect to the previous page
+    }, 2000);
+});
+    </script>
+</body>
+</html>
