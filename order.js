@@ -6,6 +6,6 @@ document.getElementById('orderForm').addEventListener('submit', function(event) 
     event.preventDefault();
     document.getElementById('orderNotification').style.display = 'block';
     setTimeout(() => {
-        window.location.href = 'index.html';
+        window.location.href = 'Menu.html';
     }, 2000);
 });
